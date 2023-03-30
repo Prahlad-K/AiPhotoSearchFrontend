@@ -196,8 +196,6 @@ else
 
 function getPhotos(text)
 {
-document.getElementsByClassName('searchbar')[0].value = '';
-
  var sdk = apigClientFactory.newClient();
 
   sdk.searchGet({ q: text})
@@ -366,11 +364,17 @@ function interpretVoice()
   const recognition = new window.SpeechRecognition();
 
   mic = document.getElementById("switch");  
-  
+  micIcon = document.getElementById("mic");
+      
   if (mic.innerHTML == "micOn") {
       recognition.start();
+      mic.innerHTML = "micOff";
+      micIcon.src = "assets/img/stop_icon.png";
+
   } else if (mic.innerHTML == "micOff"){
       recognition.stop();
+      mic.innerHTML = "micOn";
+      micIcon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png";
   }
 
   console.log("reached")
@@ -379,12 +383,14 @@ function interpretVoice()
       console.log("reached")
 
       mic.innerHTML = "micOff";
+      micIcon.src = "assets/img/stop_icon.png";
       console.log("Recording.....");
   });
 
   recognition.addEventListener("end", function() {
       console.log("Stopping recording.");
       mic.innerHTML = "micOn";
+      micIcon.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png";
   });
 
   recognition.addEventListener("result", resultOfSpeechRecognition);
@@ -392,6 +398,7 @@ function interpretVoice()
       const current = event.resultIndex;
       transcript = event.results[current][0].transcript;
       searchBox.value = transcript;
-      console.log("transcript : ", transcript)
+      console.log("transcript : ", transcript);
+      search();
   }
 }
