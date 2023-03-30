@@ -1,4 +1,4 @@
-#Project: AI Photo Search Application
+# Project: AI Photo Search Application
 
 ## Team members: 
 Prahlad Koratamaddi (UNI: pk2743), Suchit Sahoo (UNI: ss6630)
