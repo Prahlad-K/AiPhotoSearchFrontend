@@ -219,7 +219,7 @@ document.getElementsByClassName('searchbar')[0].value = '';
         console.log(photo_results[i]['url']);
         imageLink = "<img src='" + photo_results[i]['url'] + "' class='img-fluid' alt=''>"
 
-              previewLink = "<a href='" + photo_results[i]['url'] + "' title='' class='glightbox preview-link'><i class='bi bi-arrows-angle-expand'></i></a>"
+              previewLink = "<a href='" + photo_results[i]['url'] + "' title='Labels: " + photo_results[i]['labels']+ "' class='glightbox preview-link'><i class='bi bi-arrows-angle-expand'></i></a>"
               divPreviewLink = "<div class='gallery-links d-flex align-items-center justify-content-center'>" + previewLink + "</div>"
               galleryItem = "<div class='gallery-item h-100'>" + imageLink + divPreviewLink + "</div>"
               adjustedGalleryItem = "<div class='col-xl-3 col-lg-4 col-md-6'>" + galleryItem + "</div>"
