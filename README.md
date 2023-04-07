@@ -15,4 +15,4 @@ Prahlad Koratamaddi (UNI: pk2743), Suchit Sahoo (UNI: ss6630)
 	- Cloud Formation Template
 	- Others such as BuildSpecs used in CodePipeline
 
-Link to the hosted website: https://ai-photo-library-stack-clientbucket-8yayk0j74cum.s3.us-east-1.amazonaws.com/Frontend.zip/index.html?
+Link to the hosted website: https://clientbucket-ldrago327.s3.amazonaws.com/Frontend.zip/index.html
